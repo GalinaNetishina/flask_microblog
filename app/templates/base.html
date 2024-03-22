@@ -7,11 +7,22 @@
       <title>Welcome to Microblog</title>
       {% endif %}
     </head>
+    <style>
+        .err {
+            color:red;
+            }
 
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 3em;
+            }
+    </style>
     <body>
         <nav style="display:flex; align-items: center;">Microblog:
             <ul>
                 <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('explore') }}">Explore</a></li>
                 {% if current_user.is_anonymous %}
                 <li><a href="{{ url_for('login') }}">Login</a></li>
                 {% else %}
