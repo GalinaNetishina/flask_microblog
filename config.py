@@ -14,4 +14,3 @@ class Config:
     ADMINS = ['test@gmail.com']
 
     POSTS_PER_PAGE = 10
-    LANGUAGES = ['en', 'ru']
